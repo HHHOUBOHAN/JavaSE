@@ -407,4 +407,107 @@
 //
 //    }
 //}
+//对象的使用
+//public class Main {
+//    public static void main(String[] args) {
+//        Test3 p1= new Test3();// p相当于一个快捷方式（对Test的引用 类似于指针 引用类型）
+//        p1.name="小明";
+//        System.out.println(p1.name);
+//        Test3 p2= new Test3();// p相当于一个快捷方式（对Test的引用 类似于指针 引用类型）
+//        p2.name="小红";
+//        System.out.println(p2.name);
+// //        Test3 p3= null;
+// //        p3.name="AAAA";
+// //        System.out.println(p3.name);
+//        Test3 p4= new Test3();
+//        System.out.println(p4.name);
+//        System.out.println(p4.age);
+//        System.out.println(p4.gender);//如果创建后未初始化 会有默认值null  0(age 默认值是0)
+//    }
+//}
+//方法创建与使用（函数）(有返回值 无返回值)  (方法  行为  函数)
+//public class Main {
+//    public static void main(String[] args) {
+//        Test3 t = new Test3();
+//        t.name="hello";
+//        t.age=10;
+//        t.gender="hello";
+//        t.hello();
+//
+//        Test3 t1 = new Test3();
+//        t1.name="hello";
+//        t1.age=0;
+//        t1.gender="hello";
+//        t1.hello();
+//        int r=t1.sum(1,2);
+//        char s= t.test(8);
+//        System.out.println(s);
+//        System.out.println(r);
+//        int a=5,b=10;
+//        t1.test3(a,b);
+//        Test3 p=new Test3();
+//        p.name="red";
+//        p.modify(p);
+//        System.out.println(p.name);
+//
+//
+//    }
+//}
+//方法的进阶使用
+//public class Main {
+//    public static void main(String[] args) {
+//        Test3 p1 = new Test3();
+//        p1.setName("APP");
+//        System.out.println(p1.name);
+//    }
+//}
+//方法的重载(一个类中可以包含多个同名方法 需要形式参数不一样 仅仅返回值（可以一样也可以不一样）类型不同是不行的)
+//public class Main {
+//    public static void main(String[] args) {
+//        Test3 p=new Test3();
+//        System.out.println(p.sum(1.9,2.9));
+//    }
+//}
+//方法的互调与递归(调用)
+//public class Main {
+//    public static void main(String[] args) {
+//        Test3 p=new Test3();
+//        p.hello();
+//        p.goodbye();
+//        p.work();
+//        p.sleep();
+//        p.test();
+//        //求一到n的和
+//        System.out.println(p.test(5) );
+//
+//
+//
+//    }
+//}
 
+//构造方法（构造方法不需要填写返回值 方法名称和类名相同  默认情况下每个类自带一个没有任何参数的无参构造方法）
+//public class Main {
+//    public static void main(String[] args)
+//    {
+//        Test3 test3 = new Test3("小明",19,"男");
+// //        System.out.println(test3.name);
+//        test3.hello();
+//        Test3 p= new Test3();
+//        p.hello();
+// //        final int a = 3;
+//    }
+//}
+//静态变量 静态方法
+public class Main {
+    public static void main(String[] args) {
+        Test3 p0 = new Test3();
+        Test3 p1 = new Test3();
+        p1.info=1;
+        System.out.println(p1.info);
+        System.out.println(p0.info);
+        p1.test();
+
+
+
+    }
+}
