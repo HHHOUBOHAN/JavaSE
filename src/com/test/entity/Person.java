@@ -1,4 +1,4 @@
-import java.util.Scanner;
+package com.test.entity;
 
 //public class Test3 {
 //    static String name;
@@ -114,4 +114,81 @@ import java.util.Scanner;
 //        System.out.println("hello"+info);
 //    }
 //}
-//包和访问控制-包生成和生成
+//package com.test.entity;
+//public class Test3 {
+//    String name;
+//    int age;
+//    String gender;
+// //    Test3(){
+// //        System.out.println("Test3 entity");
+// //    }
+// //    hello(){
+// //        System.out.println("hello"+name+"年龄"+age+gender);
+// //    }
+//}
+//public class Test3 {
+//    private String name;
+//    private int age;
+//    private String gender;
+//    private static Test3 instance;
+//    private Test3(){}
+//    public static   Test3 getTest3(){
+//        if(instance == null){
+//            instance = new Test3();
+//        }
+//        return instance;
+//    }
+//}
+//继承
+
+//    public Person(String name) {
+//        this.name = name;
+//    }
+//    public Person(String name, int age, String gender) {
+//        this.name = name;
+//        this.age = age;
+//        this.gender = gender;
+//    }
+
+//    public boolean equal(Object obj){
+//        if(obj instanceof Person another){
+//            return name.equals(another.name)&&age==another.age&&gender.equals(another.gender);
+//            //age==another.age  字符串不能这样比较   因为这样只比较了引用 而字符串应该比较内容
+//        }
+//        return false;
+//
+//    }
+
+
+//    @Override
+//    public boolean equals(Object obj) {
+//        return super.equals(obj);
+//    }
+//    public static void test(){
+//        System.out.println("test");
+//    }
+//
+//    @Override
+//    public String toString() {
+//        return "Person{" +
+//                "name='" + name + '\'' +
+//                ", age=" + age +
+//                ", gender='" + gender + '\'' +
+//                '}';
+//    }
+public sealed abstract class Person permits,Teacher {
+    protected String name="人类";
+    protected int age;
+    protected String gender;
+    public  abstract void hello();
+//    通过向导生成 alt+insert
+
+    @Override
+    public String toString() {
+        return "Person{" +
+                "name='" + name + '\'' +
+                ", age=" + age +
+                ", gender='" + gender + '\'' +
+                '}';
+    }
+}

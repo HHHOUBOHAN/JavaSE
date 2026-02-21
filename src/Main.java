@@ -1,4 +1,3 @@
-//public class Main {
 //    public static void main(String[] args) {
 //        System.out.println("Hello World!");
 //    }
@@ -485,6 +484,8 @@
 //    }
 //}
 
+import com.test.entity.*;
+
 //构造方法（构造方法不需要填写返回值 方法名称和类名相同  默认情况下每个类自带一个没有任何参数的无参构造方法）
 //public class Main {
 //    public static void main(String[] args)
@@ -498,16 +499,145 @@
 //    }
 //}
 //静态变量 静态方法
-public class Main {
-    public static void main(String[] args) {
-        Test3 p0 = new Test3();
-        Test3 p1 = new Test3();
-        p1.info=1;
-        System.out.println(p1.info);
-        System.out.println(p0.info);
-        p1.test();
+//public class Main {
+//    public static void main(String[] args) {
+//        Test3 p0 = new Test3();
+//        Test3 p1 = new Test3();
+//        p1.info=1;
+//        System.out.println(p1.info);
+//        System.out.println(p0.info);
+//        p1.test();
+//
+//
+//
+//    }
+//}
+//包和访问控制-包生成和生成（包就是分类存放类）
+//import com.test.entity.*;//通过这个引用类
+// //import com.test.entity.*;导入entity 下面所有的类
+//public class Main {
+//    public static void main(java.lang.String[] args) {
+//        Test3 test = new Test3();
+//    }
+//}
+//访问权限控制
+//public class Main {
+//    public static void main(String[] args) {
+//        Test3 test3 = new Test3();
+//        test3.name="几级啊";
+//        System.out.println(test3.name);
+//        test3.hello();
+//    }
+//}
+//类的封装
+//public class Main {
+//    public static void main(String[] args) {
+//        Test3 p=Test3.getTest3();
+//    }
+//}
+//类的继承(final直接不能再继承不能再改动 继承哟要加extends+类) 只能单继承不能多继承
+//public class Main{
+//    public static void main(String[] args) {
+//    }
+//}
+//顶层 object类
+//public class Main extends Object{
+//    public static void main(String[] args) {
+////        Student s = new Student();
+////        s.hello();
+////        s.getClass();//隐式继承  继承于Object
+////        Student s1 = s;
+////        System.out.println(s.toString());
+//        Person p1=new Person("小明",13,"男");
+//        Person p2=new Person("小明",13,"男");
+//        System.out.println(p1.equals(p2));
+//    }
+//}
+//类型判断模式匹配(类型检查 和 强制类型转换 来根据传入对象的类型执行不同的代码。)
+//public class Main {
+//    public static void main(String[] args) {
+//
+//    }
+//    private static  void test(Person p){
+//        if(p instanceof Student student){
+////            Student student = (Student) p;
+//            student.study();
+//        }
+//        else if(p instanceof Teacher teacher){
+////            Teacher t = (Teacher) p;
+//            teacher.teach();
+//        }
+//    }
+//}
+////方法的重写  方法重载
+//public class Main {
+//    public static void main(String[] args) {
+//        Student student = new Student();
+//        Person person = student;
+////        s1.hello();
+////        person.hello();
+//        System.out.println(student.name);
+////        System.out.println(person.name);
+//        //如果我们去取类中的变量，看的是编译的类型、
+//        //如果我们去取类中的方法，看到是运行的类型
+////        变量：变量的访问是由 编译时类型 决定的。所以，如果你访问一个类的字段或属性（变量），是按照声明类型来访问的。
+////        方法：方法调用是由 运行时类型 决定的。即使变量的声明类型是父类，只要它指向子类对象，调用的就是子类重写的方法。
+//        Person p1= new Person("校内",12,"价格快速流动的");
+//        Person p2= new Person("校内",12,"价格快速流动的");
+//        System.out.println(p1==p2);
+//        System.out.println(p1.equals(p2));
+//        String s1="hello";
+//        String s2="hello";
+//        System.out.println(s1==s2);
+//        Person p1= new Person("校内",12,"价格快速流动的");
+//        System.out.println(p1);
+//         Student p=new Student();
+//        System.out.println(p);
+//        Student p=new Student();
+//        p.test();
+//        Person p1=new Student();
+//        p1.test();
+//        //静态方法 可以继承 不可以重写(如果在父类的方法中加上final就不能再重写了 或者加一个protected 但是子类可以创建一个相同的类)
+//        Person p=new Student();
+//        p.hello();
+//        Person p2=new Teacher();
+//        p2.hello();
+//
+//    }
+//}
+    //抽象类（无法实例化  细节的实现） 抽象类的子类可以一直抽象  抽象方法的访问权限不能private 要不然细节将无法编写
+//public class Main {
+//    public static void main(String[] args) {
+////        Person p=new Person();
+//    }
+//}
+//接口(内部只能包括抽象方法 implements+抽象类 不能创建对象 但是可以将接口实现类的对象以接口的形式使用)
+//public class Main {
+//    public static void main(String[] args) throws CloneNotSupportedException {
+//        Student student= new Student("小明",13,"男");
+//        Object clone =student.clone();
+////        System.out.println(clone==student);
+//        System.out.println(clone);
+//        System.out.println(student);
+//    }
+//}
+//接口默认 静态方法 接口中的private方法  其他类型(枚举 记录类型(用于保存不可变数据)) 密封类型（final(所有都不能继承) 密封类型（指定继承））-子类必须显示标记 final sealed non-sealed
+//public class Main {
+//    public static void main(String[] args) {
+////        Study s = new Teacher();
+////        s.study();
+////        Student student = new Student();
+////        student.setStatus(Status.SLEEP);
+////        System.out.println(student.getStatus().getName());
+//        Order order1 =new Order (1,"珍珠奶茶","很快封杀开发");
+//        Order order2 =new Order (1,"珍珠奶茶","很快封杀开发");
+////        Order order2 =new Order (2,"冰淇淋","分手的话");
+//        System.out.println(order1);
+//        System.out.println(order2);
+//        System.out.println(order1.equals(order2));
+//        System.out.println(order2.id());
+//    }
+//}
+//基本类型包装类（基本数据类型和引用数据类型变量（存储的是对象的引用）） Object
 
 
-
-    }
-}
