@@ -484,8 +484,6 @@
 //    }
 //}
 
-import com.test.entity.*;
-
 //构造方法（构造方法不需要填写返回值 方法名称和类名相同  默认情况下每个类自带一个没有任何参数的无参构造方法）
 //public class Main {
 //    public static void main(String[] args)

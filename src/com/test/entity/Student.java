@@ -22,22 +22,20 @@ package com.test.entity;
 //    }
 //}
 
-public final class Student extends Person implements Study{
-    public String name;
-
-//    public void study(){
-//        System.out.println("我是"+name+"Java");
+//public final class Student extends Person implements Study{
+//    public String name;
+//
+////    public void study(){
+////        System.out.println("我是"+name+"Java");
+////    }
+//    public void hello(){
+//        System.out.println("老师好 我叫" );
 //    }
-    public void hello(){
-        System.out.println("老师好 我叫" );
-    }
-    private Status status;
-    public Status getStatus(){
-        return status;
-    }
-    public void setStatus(Status status){
-        this.status = status;
-    }
-
-
-}
+//    private Status status;
+//    public Status getStatus(){
+//        return status;
+//    }
+//    public void setStatus(Status status){
+//        this.status = status;
+//    }
+//}

@@ -176,19 +176,19 @@ package com.test.entity;
 //                ", gender='" + gender + '\'' +
 //                '}';
 //    }
-public sealed abstract class Person permits,Teacher {
-    protected String name="人类";
-    protected int age;
-    protected String gender;
-    public  abstract void hello();
-//    通过向导生成 alt+insert
-
-    @Override
-    public String toString() {
-        return "Person{" +
-                "name='" + name + '\'' +
-                ", age=" + age +
-                ", gender='" + gender + '\'' +
-                '}';
-    }
-}
+//public sealed abstract class Person permits,Teacher {
+//    protected String name="人类";
+//    protected int age;
+//    protected String gender;
+//    public  abstract void hello();
+////    通过向导生成 alt+insert
+//
+//    @Override
+//    public String toString() {
+//        return "Person{" +
+//                "name='" + name + '\'' +
+//                ", age=" + age +
+//                ", gender='" + gender + '\'' +
+//                '}';
+//    }
+//}
